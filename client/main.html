@@ -1,25 +1,40 @@
 <head>
-  <title>simple</title>
+  <title>Forum</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+   {{ > loginButtons}}
 
-  {{> hello}}
-  {{> info}}
+    {{#if currentUser}}
+      {{>form}}
+   {{else}}
+      <p>Please log in to submit a new post.</p>
+    {{/if}}
+
+   {{ > posts}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name = "posts">
+    <h1> Posts</h1>
+    <ul>
+        {{#each posts}}
+            <li> 
+                <h3>{{title}}</h3>
+                <p><em> by {{username}} </em></p>
+                <p>{{body}}</p>
+            </li>
+        {{/each}}
+      </ul>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
-  </ul>
+<template name="form">
+  <form>
+    <label>Post Title:
+      <input type="text" id="title" />
+    </label>
+    <label>Post Body:
+      <textarea id="body"></textarea>
+    </label>
+    <input type="submit" value="Submit" id="submit"/>
+  </form>
 </template>

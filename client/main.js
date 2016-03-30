@@ -1,3 +1,4 @@
+/*
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
@@ -20,3 +21,17 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+Template.hello.greeting = function () {
+	return "Welcome to forum.";
+};*/
+
+var Posts = new Meteor.Collection('posts');
+
+if (Meteor.isClient) {
+  Template.posts.helpers({
+    posts: function() {
+      return Posts.find();
+    }
+  })
+}
