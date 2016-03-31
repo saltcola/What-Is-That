@@ -1,1 +1,23 @@
 /* CSS declarations go here */
+
+.posts {
+    display: block;
+    max-width: 800px;
+    background: #0090BE;
+    margin: 0 auto 1em;
+    padding: 10px;
+    border-radius: .5em;
+    position: relative;
+}
+
+.posts h1 {
+	text-align: center;
+}
+
+.list-group-item {
+	background: #80DDAA;
+}
+
+#form {
+	text-align: center;
+}
