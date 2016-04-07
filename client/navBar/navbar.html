@@ -1,0 +1,123 @@
+<template name="navBar" data-offset="60">
+    
+    <nav class="navbar navbar-static-top navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-href" href="{{pathFor route='posts'}}">WHAT'S THAT</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+            {{#if currentUser}} 
+                    {{#if isInRole 'apprentice'}}
+                        <li>
+                            <a href="{{pathFor route='companySearch'}}">Search Companies
+                                    </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Stack 
+                                    <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Meteor</a></li>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{pathFor route='apprenticeProfile'}}">
+                            Edit Profile</a>
+                        </li>
+                    {{/if}} 
+                    {{#if isInRole 'company'}}
+                            <li><a href="{{pathFor route='partner'}}">Search Apprentices</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cohort 
+                                        <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Cohort  2014</a></li>
+                                    <li><a href="#">Cohort 2015</a></li>
+                                    <li><a href="#">Cohort 2016</a></li>
+                                </ul>
+                            </li>
+                        {{/if}} 
+                    {{#if isInRole 'siteManager'}}
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Partner&Apprentice 
+                                    <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{pathFor route='apprentice'}}">Search Companies
+                                        </a>
+                                </li>
+                                <li><a href="{{pathFor route='partner'}}">Search Apprentices</a></li>
+                                <li><a href="{{pathFor route='siteManager'}}">SiteManager</a></li>
+                            </ul>
+                        </li>
+                    {{/if}}
+                    {{#if isInRole 'admin'}}
+                        <li><a href="{{pathFor route='admin'}}">Admin Panel</a></li>
+                       <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Partner&Apprentice 
+                                    <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{pathFor route='apprentice'}}">Search Companies
+                                        </a>
+                                </li>
+                                <li><a href="{{pathFor route='partner'}}">Search Apprentices</a></li>
+                                <li><a href="{{pathFor route='siteManager'}}">SiteManager</a></li>
+                            </ul>
+                        </li>
+                    {{/if}}
+            {{/if}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">                    
+                {{#if currentUser}}                    
+                    <li><a href="#" class="logout"> Logout</a></li>
+                {{else}}
+                <li>
+                        <a href="{{pathFor route='register'}}">
+                            <span class="glyphicon glyphicon-user"></span> Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        
+                         <a href="{{pathFor route='login'}}">
+                            <span class="glyphicon glyphicon-log-in"></span> Login 
+                        </a>
+                    </li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+    <!--
+        <nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+        <li><a href="#">Page 3</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+-->
+</template>

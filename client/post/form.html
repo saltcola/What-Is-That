@@ -1,0 +1,25 @@
+<template name="form">
+    <div class="container-fluid" id = "form">
+        <form>
+            <div class="row">
+                <label>Post Title:
+                    <input type="text" id="title" />
+                </label>
+            </div>
+            <div class="row">
+                <div class = "col-lg-4">
+                <label>Post Body:</label>
+                </div>
+                <div class = "col-lg-8">
+                <textarea id="body"></textarea>
+                </div>
+            </div>
+            <div class = "row">
+                {{> takePhoto}}
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit" id="submit" />
+            </div>
+        </form>
+    </div>
+</template>

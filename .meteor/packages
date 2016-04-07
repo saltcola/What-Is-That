@@ -22,3 +22,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 accounts-ui
 accounts-password
 mdg:camera
+twbs:bootstrap
+iron:router
+alanning:roles

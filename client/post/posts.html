@@ -1,0 +1,21 @@
+<template name="posts">
+    <div class="posts">
+        <div class="container-fluid">
+            <h1> Posts</h1>
+            <ul class="list-group">
+                {{#each posts}}
+                <li class="list-group-item">
+                    <h3>{{title}}</h3>
+                    <p><em> by {{username}} </em></p>
+                    <p>{{body}}</p>
+                </li>
+                {{/each}}
+            </ul>
+            {{#if currentUser}} 
+                {{>form}}                 
+            {{else}}
+                <p>Please log in to submit a new post.</p>
+            {{/if}}
+        </div>
+    </div>
+</template>

@@ -1,9 +1,4 @@
-Posts = new Meteor.Collection('posts');
-
-
-
-if (Meteor.isClient) {
-    Accounts.ui.config({ passwordSignupFields: 'USERNAME_ONLY' });
+   
     Template.posts.helpers({
         posts: function() {
             return Posts.find();
@@ -24,5 +19,17 @@ if (Meteor.isClient) {
         }
     };
 
-
-}
+    Template.takePhoto.events({
+    'click .takePhoto': function(event, template) {
+        var cameraOptions = {
+            width: 800,
+            height: 600
+        };
+        MeteorCamera.getPicture(cameraOptions, function (error, data) {
+           if (!error) {
+               template.$('.photo').attr('src', data); 
+           }
+        });
+        event.preventDefault();
+    }
+});
