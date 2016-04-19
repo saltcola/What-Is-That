@@ -6,13 +6,22 @@
     });
 
     Template.form.events = {
-        'click #submit': function(event) {
+        'click #submit': function(event, template) {
             event.preventDefault();
-            var title = $('#title').val();
-            var body = $('#body').val();
+            let title = template.find('#title').value;
+            let body = template.find('#body').value;
+            let username = "";
+            if (!Meteor.user()){
+                username = "Anonymous"
+            }else{
+                username = Meteor.user().username;
+            }
+            console.log(title);
+            console.log(body);
+            console.log(username);
             Posts.insert({
                 title: title,
-                username: Meteor.user().username,
+                username: username,
                 body: body
             });
             $('#title, #body').val('');

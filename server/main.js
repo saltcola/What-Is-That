@@ -2,11 +2,10 @@ import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
 
-            Meteor.publish("posts");
-
             Meteor.methods({
-                'create': function(email, password) {
+                'create': function(username,email, password) {
                     Accounts.createUser({
+                        username:username,
                         email: email,
                         password: password
                     });

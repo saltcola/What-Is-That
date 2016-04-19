@@ -1,24 +1,19 @@
 <template name="form">
-    <div class="container-fluid" id = "form">
-        <form>
-            <div class="row">
-                <label>Post Title:
-                    <input type="text" id="title" />
-                </label>
-            </div>
-            <div class="row">
-                <div class = "col-lg-4">
+    <div class="container" id = "form">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label>Post Title: </label>
+                <input type="text" id="title" > 
+            </div>              
+            <div class="form-group">
                 <label>Post Body:</label>
-                </div>
-                <div class = "col-lg-8">
                 <textarea id="body"></textarea>
-                </div>
             </div>
-            <div class = "row">
+            <div class="form-group">
                 {{> takePhoto}}
             </div>
-            <div class="row">
-                <input type="submit" value="Submit" id="submit" />
+            <div class="form-group">
+                <input type="submit" value="Submit" id="submit" >
             </div>
         </form>
     </div>

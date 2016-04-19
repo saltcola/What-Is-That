@@ -1,10 +1,12 @@
 
 Template.register.events({
-        'submit form': function(event) {
+        'submit form': function(event,template) {
             event.preventDefault();
-            var email = $('[name=email]').val();
-            var password = $('[name=password]').val();
-          	Meteor.call('create', email, password);
+            let email = template.find('#email').value;
+            let password = template.find('#password').value;
+            let username = template.find('#username').value;
+            console.log(username);
+          	Meteor.call('create', username,email, password);
             Meteor.loginWithPassword(email, password, function(error) {
                 if (error) {
                     console.log(error.reason);
@@ -16,10 +18,10 @@ Template.register.events({
     });
 
 Template.login.events({
-        'submit form': function(event) {
+        'submit form': function(event,template) {
             event.preventDefault();
-            var email = $('[name=loginEmail]').val();
-            var password = $('[name=loginPassword]').val();
+            let email = template.find('#loginEmail').value;
+            let password = template.find('#loginPassword').value;
             Meteor.loginWithPassword(email, password, function(error) {
                 if (error) {
                     console.log(error.reason);
