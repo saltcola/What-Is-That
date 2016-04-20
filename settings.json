@@ -1,0 +1,8 @@
+{
+  "accessKeyId": "AKIAIQYAX7SSIB464MVA",
+  "secretAccessKey": "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",
+  "bucketName": "image-gf",
+  "public": {
+    "bucketUrl": "http://image-gf.s3-website-us-east-1.amazonaws.com/"
+  }
+}

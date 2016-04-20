@@ -1,4 +1,4 @@
-<template name="form">
+<template name="makeAPost">
     <div class="container" id = "form">
         <form class="form-horizontal" role="form">
             <div class="form-group">
@@ -9,9 +9,21 @@
                 <label>Post Body:</label>
                 <textarea id="body"></textarea>
             </div>
+            <div class = "form-group">
+                <lable>
+                  Upload Image:
+                </lable>  
+                <div class = "row">
+                    <div class = "col-xs-8 col-xs-offset-2 col-sm-offset-4">
+                    {{> uploadImage imageCollection="postImages" name="post-image" size="thumbnail" classInput="image-picker" inputName="post-image"}}  
+                    </div>
+                </div>                                        
+            </div>
+            <!--
             <div class="form-group">
                 {{> takePhoto}}
             </div>
+            -->
             <div class="form-group">
                 <input type="submit" value="Submit" id="submit" >
             </div>
