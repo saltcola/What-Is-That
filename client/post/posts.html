@@ -10,7 +10,12 @@
                     <p>
                     <img class="uploaded-image" src="{{image}}"/> 
                     </p>
-                    <p>{{body}}</p>                    
+                    <p>{{body}}</p>  
+                    {{#if poster}}
+                     <button>Edit</button> 
+                    <button>Delete</button> 
+                    {{/if}} 
+                    <button>reply</button>                
                 </li>
                 {{/each}}
             </ul>

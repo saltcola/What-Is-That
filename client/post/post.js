@@ -9,7 +9,19 @@
       if (image) {
         return image.url({store: "postImages-normal"});
       }
-    }
+    },
+
+      poster: function() {
+        username = Meteor.user().username
+        poster = this.username
+        console.log(username)
+        console.log(poster)
+        if (username == poster){
+          return true
+        }else{
+          return false
+        }
+      }
 
     });
 
