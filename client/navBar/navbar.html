@@ -15,7 +15,7 @@
                     <li><a href="{{pathFor route='posts'}}">All questions</a></li>
                     <li><a href="{{pathFor route='makeAPost'}}">Ask a question</a></li>
                     {{#if currentUser}}
-                        <li><a href="#">All my questions</a></li>
+                        <li><a href="{{pathFor route='userPosts'}}">All my questions</a></li>
                     {{/if}}
                 </ul>
                 {{#if currentUser}}

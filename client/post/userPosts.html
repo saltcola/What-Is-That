@@ -1,0 +1,19 @@
+<template name="userPosts">
+    <div class="posts">
+        <div class="container-fluid">
+            <h1>Questions</h1>
+            <ul class="list-group">
+                {{#each posts}}
+                <li class="list-group-item">
+                    <h3>{{title}}</h3>
+                    <p><em> by {{username}} </em></p>
+                    <p>
+                    <img class="uploaded-image" src="{{image}}"/> 
+                    </p>
+                    <p>{{body}}</p>                    
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
