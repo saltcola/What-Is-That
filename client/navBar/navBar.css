@@ -1,4 +1,4 @@
-
+/*
 .navbar-brand{
   font-family: 'Niconne', cursive;
   font-size: 2em;
@@ -91,4 +91,14 @@
     color: #000000 !important;
     background-color: #80ddaa !important;
   }
+}*/
+
+.navbar-brand{
+  font-family: 'Niconne', cursive;
+  font-size: 2em;
 }
+.navbar {
+  margin-bottom: 10px; }
+/* line 32, ../sass/style.scss */
+.navbar .navbar-inner {
+  border-radius: 0px 0px 3px 3px; }

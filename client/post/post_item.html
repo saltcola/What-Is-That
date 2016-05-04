@@ -1,0 +1,17 @@
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3><a href="./posts/{{_id}}">{{title}}</a></h3>
+      <p>
+        submitted by {{username}},
+        <a href="./posts/{{_id}}">{{commentsCount}} comments</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}} 
+      </p>
+      <p>
+          <img class="uploaded-image" src="{{image}}"/> 
+      </p>
+      <p>{{body}}</p> 
+    </div>
+    <a href="./posts/{{_id}}" class="discuss btn btn-default">Discuss</a> 
+  </div>
+</template>

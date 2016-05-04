@@ -1,5 +1,20 @@
-<template name = "layout">
-	{{ > navBar}}
-	{{ > yield }}
-	
+<template name="layout">
+
+<div class="container">
+        <div class="row">
+            <span></span> 
+           {{ > navBar}}
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="container" id = "main">
+        <div class="row">
+            <span></span> 
+            {{> yield}}
+            <span></span>
+        </div>
+    </div>
+
+    
 </template>

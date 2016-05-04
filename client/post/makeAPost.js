@@ -1,6 +1,6 @@
  
  Template.makeAPost.events = {
-        'click #submit': function(event, template) {
+        'submit form': function(event, template) {
             event.preventDefault();
             let title = template.find('#title').value;
             let body = template.find('#body').value;

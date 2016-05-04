@@ -1,24 +1,9 @@
+
+
 <template name="posts">
-    <div class="posts">
-        <div class="container-fluid">
-            <h1>Questions</h1>
-            <ul class="list-group">
-                {{#each posts}}
-                <li class="list-group-item">
-                    <h3>{{title}}</h3>
-                    <p><em> by {{username}} </em></p>
-                    <p>
-                    <img class="uploaded-image" src="{{image}}"/> 
-                    </p>
-                    <p>{{body}}</p>  
-                    {{#if poster}}
-                     <button>Edit</button> 
-                    <button>Delete</button> 
-                    {{/if}} 
-                    <button>reply</button>                
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
+  <div class="posts">
+    {{#each posts}}
+      {{> postItem}}
+    {{/each}}
+  </div>
 </template>
