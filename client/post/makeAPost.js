@@ -20,7 +20,8 @@
             Posts.insert({
                 title: title,
                 username: username,
-                body: body
+                body: body,
+                date: Date.now()
             },
             function(error, postId) {
               if (error) {

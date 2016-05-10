@@ -1,7 +1,8 @@
    
     Template.posts.helpers({
         posts: function() {
-            return Posts.find();
+            let posts = Posts.find({},{sort: {date:-1}});
+            return posts;
         },
 
        image: function() {
@@ -29,7 +30,7 @@
         posts: function() {
             username = Meteor.user().username
             console.log(username)
-            return Posts.find({'username':username});
+            return Posts.find({'username':username},{sort: {date:-1}});
         },
 
        image: function() {

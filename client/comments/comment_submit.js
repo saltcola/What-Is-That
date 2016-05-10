@@ -8,7 +8,8 @@ Template.commentSubmit.events({
     var comment = {
       body: body,
       postId: Router.current().params._id,
-      commentBy: user
+      commentBy: user,
+      date: Date.now()
     };
 
       console.log(Router.current().params._id);

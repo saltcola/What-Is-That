@@ -8,14 +8,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{pathFor route='posts'}}">What's That</a>
+                <a class="navbar-brand" href="{{pathFor route='posts'}}">What's That ?</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="{{pathFor route='posts'}}">All questions</a></li>
-                    <li><a href="{{pathFor route='makeAPost'}}">Ask a question</a></li>
+                    <li><a href="{{pathFor route='posts'}}">Show Me All</a></li>
+                    <li><a href="{{pathFor route='makeAPost'}}">Ask</a></li>
                     {{#if currentUser}}
-                        <li><a href="{{pathFor route='userPosts'}}">All my questions</a></li>
+                        <li><a href="{{pathFor route='userPosts'}}">My Questions</a></li>
                     {{/if}}
                 </ul>
                 {{#if currentUser}}
