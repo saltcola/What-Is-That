@@ -5,7 +5,7 @@
       <p>
         submitted by {{username}},
         <a href="http://localhost:3000/posts/{{_id}}">{{commentsCount}} comments</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}} 
+        <!-- {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}  -->
         <a href="http://localhost:3000/posts/{{_id}}" class="discuss btn btn-default">Discuss</a> 
       </p>
     
@@ -16,8 +16,8 @@
       </p>
        
       </div>
-      <div class = "col-sm-7">
-      <h1>{{body}}</h1> 
+      <div class = "col-sm-5">
+      <h2>{{body}}</h2> 
 
       </div>
     </div>
