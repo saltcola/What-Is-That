@@ -5,7 +5,6 @@ Template.postPage.helpers({
   },
   post:function(){
   	let id = Router.current().params._id;
-  	console.log(id);
   	return Posts.find({"_id":id});
   },
  

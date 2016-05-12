@@ -1,4 +1,11 @@
-
+Template.postItem.events({
+  'click  .post': function(e){
+    e.preventDefault();
+    let id = String(this._id);
+    console.log(id);
+    Router.go("/posts/"+id);
+  }
+});
 
 Template.postItem.helpers({
         posts: function() {
