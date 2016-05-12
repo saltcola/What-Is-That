@@ -14,4 +14,4 @@
 ``` meteor add okgrow:image-upload ```
 
 ### Run meteor
-In your project directory type ``` ./Meteor.sh ``` and hit enter.
+In your project directory type ``` ./meteor.sh ``` and hit enter.
