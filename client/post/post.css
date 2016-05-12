@@ -11,6 +11,7 @@ body {
   background: #eee;
  /* background:#808080;*/
   color: #666666; 
+  font-family: 'Varela Round';
 }
 
 #main {
@@ -31,7 +32,9 @@ body {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
-  opacity: 1; }
+  opacity: 1; 
+ /* border-radius: 15px;*/
+  }
 .post:before, .post:after {
   content: "";
   display: table; }
@@ -75,8 +78,12 @@ body {
   margin-bottom: 3px; }
 
 .comments {
+/*  padding-left: 40px;
+  padding-right:40px;*/
   list-style-type: none;
-  margin: 0; }
+  margin: 0; 
+  padding-left:0px;
+}
 .comments li h4 {
   font-size: 16px;
   margin: 0; }
@@ -87,6 +94,16 @@ body {
   font-size: 12px; }
 .comments li p:last-child {
   margin-bottom: 0; }
+.commentBoxLeft{
+  padding-left: 80px;
+}
+.commentBoxRight{
+  padding-right: 80px;
+}
+.comment-form{
+  padding-right: 80px;
+}
+
 
 .dropdown-menu span {
   display: block;
@@ -107,6 +124,12 @@ body {
 .load-more:hover {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.1); }
+
+  .posts {
+    border-radius: 5px;
+    background: #d8d8d8;
+    padding: 15px;
+  }
 
 .posts .spinner-container{
   position: relative;
@@ -174,5 +197,15 @@ body {
 .postPage{
   padding:20px;
   border-radius: 5px;
-  /*background: #006dcc;*/
+  background: #D8D8D8;
+}
+
+.uploaded-image{
+  border-radius: 20px;
+}
+
+#form{
+  background: #d8d8d8;
+  padding: 15px;
+  border-radius: 5px;
 }

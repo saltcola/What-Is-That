@@ -1,10 +1,23 @@
 <template name="commentItem">
-<div class = "animated one slideInLeft">
-  <li>  
-    <h3 class = "commentItem">
-      <span class="author">{{commentBy}}</span>
-    </h3>
-    <h4>{{body}}</h4>   
-  </li>
-   </div>
+
+{{#if ownComments}}
+	<div class = "animated one slideInUp commentBoxRight">
+	  <li>  
+	    <h3 class = "commentItem">
+	      <span class="author">{{commentBy}}</span>
+	    </h3>
+	    <h4>{{body}}</h4>   
+	  </li>
+	</div>
+{{else}}
+	<div class = "animated one slideInUp commentBoxLeft">
+	  <li>  
+	    <h3 class = "commentItem">
+	      <span class="author">{{commentBy}}</span>
+	    </h3>
+	    <h4>{{body}}</h4>   
+	  </li>
+	</div>
+{{/if}}
+
 </template>

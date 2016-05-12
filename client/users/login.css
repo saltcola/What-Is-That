@@ -1,6 +1,8 @@
 .loginPage{
 	padding:50px 0;
 	font-family: 'Varela Round';
+      background: #D8D8D8;
+      border-radius: 5px;
 }
 
 .loginPage a {
