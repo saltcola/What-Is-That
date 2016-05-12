@@ -99,11 +99,14 @@
 }
 .navbar {
   margin-bottom: 10px; 
+  font-family: 'Varela Round';
 }
 .navbar .navbar-inner {
   border-radius: 0px 0px 3px 3px; 
+  font-family: 'Varela Round';
 }
 .nav {
   font-size: 1.2em;
+  font-family: 'Varela Round';
 }
 
