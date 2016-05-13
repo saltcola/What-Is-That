@@ -14,6 +14,7 @@ Template.commentSubmit.events({
 
       console.log(Router.current().params._id);
       Comments.insert(comment);
+      template.find('#commentBody').value = "";
 
     // Meteor.call('commentInsert', comment, function(error, commentId) {
     //   if (error){
